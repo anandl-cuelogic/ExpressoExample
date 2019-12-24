@@ -1,0 +1,26 @@
+API components
+
+
+- Espresso - onView(), onData(), pressBack
+- ViewMatchers - onView()
+- ViewAction - ViewInteraction.perform() method, such as click().
+- ViewAssertion - ViewInteraction.check()
+
+
+Steps to implements Espresso
+
+* Find A View:
+    - onView(withId(R.id.my_view))
+    - onView(allOf(withId(R.id.my_view), withText("Hello!")))
+    - AdapterView—such as ListView, GridView, or Spinner—the onView() method might not work. In these cases, you should use onData() instead.
+
+* Perform an action on a view
+   - onView(...).perform(click())
+   - onView(...).perform(typeText("Hello"), click())
+   - onView(...).perform(scrollTo(), click())
+
+* Check view assertion
+  - Assertions can be applied to the currently selected view with the check() method
+  - The most used assertion is the matches() assertion.
+
+
